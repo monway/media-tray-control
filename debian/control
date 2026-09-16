@@ -1,0 +1,13 @@
+Source: media-tray-control
+Section: utils
+Priority: optional
+Maintainer: Dylan <loki@hell>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+
+Package: media-tray-control
+Architecture: all
+Depends: ${misc:Depends}, python3, python3-gi, gir1.2-ayatanaappindicator3-0.1, gir1.2-gtk-3.0
+Description: System tray controller for Jellyfin Media Server
+ Lightweight AppIndicator status icon and menu controller for managing the
+ local Jellyfin systemd service.

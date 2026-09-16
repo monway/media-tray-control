@@ -1,0 +1,10 @@
+__pycache__/
+*.deb
+
+# Debian packaging artifacts
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/media-tray-control/
+debian/media-tray-control/

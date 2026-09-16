@@ -1,0 +1,25 @@
+# Media Tray Control - Lightweight system tray controller for media daemons
+# Copyright (C) 2026 Jesse "Dylan" Mahoney (何孟維)
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This project is an independent open-source utility and is not affiliated,
+# endorsed, or associated with the Jellyfin project or Jellyfin contributors.
+# Jellyfin is a trademark of its respective owners.
+
+// Copyright (C) 2026 Jesse Dylan Mahoney (何孟維)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.systemd1.manage-units") {
+        if (action.lookup("unit") == "jellyfin.service") {
+            var verb = action.lookup("verb");
+            if (verb == "start" || verb == "stop" || verb == "restart") {
+                return polkit.Result.YES;
+            }
+        }
+    }
+});

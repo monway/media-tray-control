@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -D -m 0755 media-tray-control debian/media-tray-control/usr/bin/media-tray-control
+	install -D -m 0644 media-tray-control.desktop debian/media-tray-control/usr/share/applications/media-tray-control.desktop
+	install -D -m 0644 media-tray-control.desktop debian/media-tray-control/etc/xdg/autostart/media-tray-control.desktop
+	install -D -m 0644 10-media-tray-control.rules debian/media-tray-control/usr/share/polkit-1/rules.d/10-media-tray-control.rules
+	install -D -m 0644 icons/media-tray-control-running.svg debian/media-tray-control/usr/share/icons/hicolor/scalable/apps/media-tray-control-running.svg
+	install -D -m 0644 icons/media-tray-control-stopped.svg debian/media-tray-control/usr/share/icons/hicolor/scalable/apps/media-tray-control-stopped.svg

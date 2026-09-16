@@ -1,0 +1,22 @@
+media-tray-control (1.2.0-1) UNRELEASED; urgency=medium
+
+  * Release 1.2.0: UI refinements, developer callout note, and Phase 2
+    WIP menu indicators.
+
+ -- Dylan <noreply@github.com>  Tue, 15 Sep 2026 21:05:09 -0400
+
+media-tray-control (1.1.0) unstable; urgency=medium
+
+  * Switch to native systemd D-Bus Manager calls for start and stop.
+  * Correct D-Bus hex escape path pattern (jellyfin_2eservice) for live updates.
+  * Implement PolicyKit JavaScript rule for zero-password service control.
+  * Remove deprecated sudoers and policy files.
+  * Add custom About dialog with AMITUOFO tribute and styling.
+
+ -- Dylan <loki@hell>  Sat, 12 Sep 2026 11:45:00 -0400
+
+media-tray-control (1.0.0) unstable; urgency=medium
+
+  * Initial release of the Jellyfin system tray controller.
+
+ -- Dylan <loki@hell>  Sun, 06 Sep 2026 17:29:00 -0400
