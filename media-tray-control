@@ -91,7 +91,7 @@ class SystemdBackend:
 class SecurityGuard:
     @staticmethod
     def run_bg(cmd_list):
-        threading.Thread(target=subprocess.run, args=(cmd_list,), kwargs={"daemon": True, "stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL, "env": os.environ.copy()}).start()
+        threading.Thread(target=subprocess.run, args=(cmd_list,), kwargs={"stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL, "env": os.environ.copy()}, daemon=True).start()
 
 class LogViewer(Gtk.Window):
     def __init__(self):

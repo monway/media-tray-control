@@ -1,4 +1,4 @@
-media-tray-control (1.2.0-1) UNRELEASED; urgency=medium
+media-tray-control (1.2.1-1) UNRELEASED; urgency=medium
 
   * Release 1.2.0: UI refinements, developer callout note, and Phase 2
     WIP menu indicators.
